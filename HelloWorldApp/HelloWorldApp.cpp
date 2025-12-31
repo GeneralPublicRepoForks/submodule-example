@@ -22,11 +22,12 @@ public:
         ezGlobalLog::RemoveLogWriter(ezLogWriter::VisualStudio::LogMessageHandler);
     }
 
-    ApplicationExecution Run() override
+    void Run() override
     {
+        
         ezLog::Info("Hello ezWorld!");
 
-        return ezApplication::Quit;
+        QuitApplication();
     }
 };
 

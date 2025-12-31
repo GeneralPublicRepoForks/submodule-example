@@ -35,5 +35,12 @@ if(EZ_3RDPARTY_ZLIB_SUPPORT)
 	)
 endif()
 
+if (EZ_3RDPARTY_TRACY_SUPPORT)
+    # copy TracyClient.dll
+    add_custom_command(TARGET HelloWorldApp POST_BUILD
+        COMMAND ${CMAKE_COMMAND} -E copy $<TARGET_FILE_DIR:Foundation>/TracyClient.dll $<TARGET_FILE_DIR:HelloWorldApp>/TracyClient.dll
+    )
+endif()
+
 # enable c++17 support as its required by ezEngine
 set_property(TARGET HelloWorldApp PROPERTY CXX_STANDARD 17)
