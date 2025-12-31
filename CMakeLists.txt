@@ -1,7 +1,8 @@
 cmake_minimum_required(VERSION 3.14)
 
 # include the ez submodule unitilty cmake functions
-include("ezEngine/Code/BuildSystem/CMake/ezUtilsSubmodule.cmake")
+include("ezEngine/Code/BuildSystem/CMake/CMakeUtils/ezUtilsSubmodule.cmake")
+
 
 ez_detect_languages()
 
