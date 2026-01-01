@@ -2,7 +2,7 @@
 add_executable(HelloWorldApp HelloWorldApp.cpp)
 
 # link against ezEngine Foundation
-target_link_libraries(HelloWorldApp Foundation)
+target_link_libraries(HelloWorldApp GameEngine)
 
 # copy the ezFoundation.dll and dependencies into the binary output directory.
 # Alternatively you could:
